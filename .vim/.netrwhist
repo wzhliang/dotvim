@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/work/tmp/disaster/bs4anp2_code/.hg'
-let g:netrw_dirhist_2='/work/nuig/scripts/conf/target/init.d'
-let g:netrw_dirhist_3='/work/nuig/www/upload'
-let g:netrw_dirhist_4='/work/nuig/src'
-let g:netrw_dirhist_5='/home/wliang/.vim/ftplugin/python/pyflakes'
-let g:netrw_dirhist_6='/work/weiqi/sgf'
-let g:netrw_dirhist_7='/work/weiqi'
