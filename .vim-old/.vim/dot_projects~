@@ -1,0 +1,93 @@
+
+ibozapper=/home/wenzhil/work/STBLite CD=code  in=in.vim {
+ emenu=code/appli/eMenu CD=../.. filter="inc/*.h src/*.c" {
+  inc/em_action.h
+  inc/emenu.h
+  inc/emenuLanguage.h
+  src/em_action.c
+  src/em_gui.c
+  src/em_loctext.c
+  src/em_util.c
+  src/emenu.c
+ }
+ fl=code/appli/fl CD=../.. filter="inc/*.h src/*.c" {
+  inc/fl_int.h
+  src/fl_accessctrl.c
+  src/fl_commondlg.c
+  src/fl_eventhndlr.c
+  src/fl_init.c
+  src/fl_remindermgr.c
+  src/fl_servicelists.c
+  src/fl_settings.c
+  src/fl_timermgr.c
+ }
+ epg=code/appli/epg CD=../.. filter="inc/*.h src/*.c" {
+  inc/common.h
+  inc/engine.h
+  inc/esg_loctext.h
+  inc/gui.h
+  inc/main.h
+  inc/msg.h
+  inc/scr.h
+  inc/scr0.h
+  inc/scr0widgets.h
+  inc/scr1.h
+  inc/scr1widgets.h
+  inc/scr2.h
+  inc/scr2widgets.h
+  inc/scr3.h
+  inc/scr3widgets.h
+  inc/scr4.h
+  inc/scr4widgets.h
+  inc/scr5.h
+  inc/scr5widgets.h
+  inc/scr6.h
+  inc/scr6widgets.h
+  inc/screens.h
+  src/engine.c
+  src/epg.c
+  src/gui.c
+  src/msg.c
+  src/scr.c
+  src/scr0.c
+  src/scr1.c
+  src/scr2.c
+  src/scr3.c
+  src/scr4.c
+  src/scr5.c
+  src/scr6.c
+  src/screens.c
+ }
+ ebanner=code/appli/eBanner CD=../.. filter="inc/*.h src/*.c" {
+  src/ebanner.c
+ }
+ gw=code/graphics/gw CD=. filter="inc/*.h src/*.c" {
+  inc/gw_int.h
+   src/gw_api.c
+   src/gw_clockwgt.c
+   src/gw_core.c
+   src/gw_datewgt.c
+   src/gw_editwgt.c
+   src/gw_esggridwgt.c
+   src/gw_listwgt.c
+   src/gw_menuwgt.c
+   src/gw_pincodewgt.c
+   src/gw_progwgt.c
+   src/gw_statwgt.c
+   src/gw_textwgt.c
+   src/gw_timewgt.c
+   src/gw_wgt.c
+   ../../inc/mw/gw_wgt.h
+ }
+ loc=code/appli/localisation CD=../.. filter="inc/*.h src/*.c" {
+  inc/textstrings.h
+  src/textstrings.c
+ }
+ in.vim
+ code/inc/mw/gentypes.h
+ code/inc/mw/ui.h
+ code/inc/appli/fl_api.h
+ code/al/ibo_viper/osal/src/osa_debug.c
+ ~/public_html/todo.htm
+ ~/public_html/stat.htm
+}

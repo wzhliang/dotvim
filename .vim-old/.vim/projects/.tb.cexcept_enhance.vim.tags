@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.2	//
+cpo	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let &cpo=s:cpo_save$/;"	variable	line:316
+cpo_save	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let s:cpo_save=&cpo$/;"	variable	line:2
+l	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let s:l = 1 - ((0 * winheight(0) + 12) \/ 24)$/;"	variable	line:426
+so	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let &so = s:so_save | let &siso = s:siso_save$/;"	variable	line:437
+so_save	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	variable	line:335
+sx	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	variable	line:433
+this_session	h:\wenzhil\.vim\projects\cexcept_enhance.vim	/^let v:this_session=expand("<sfile>:p")$/;"	variable	line:336
