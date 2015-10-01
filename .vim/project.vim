@@ -20,7 +20,11 @@ nmap <F11> :botright cwindow<CR>
 nmap <C-F11> :cclose<CR>
 
 
-let SRCDIRs=['/home/wenliang/work/zoomapp']
+if has('mac')
+    let SRCDIRs=['/Users/wliang/work/zoomapp']
+else
+    let SRCDIRs=['/home/wenliang/work/zoomapp']
+endif
 "let SRCDIRs=['/data/work/Wenzhou/MHC_BuildTree']
 for d in SRCDIRs
     "echo "Adding " . d

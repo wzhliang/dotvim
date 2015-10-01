@@ -10,7 +10,7 @@ function pull {
     if [ -d $d ]; then
       (cd $d && git remote -v show | head -1 | awk '{print $2}')
     fi
-  done > ../plugin-list.txt
+  done | sort > ../plugin-list.txt
 
   cd $HOME
   tar --exclude="*bundle*" -cf $tmp_name .vim .vimrc .gvimrc
