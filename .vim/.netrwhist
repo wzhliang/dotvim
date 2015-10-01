@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/wenliang/work/zoomapp'
+let g:netrw_dirhist_2='/home/wenliang/work/cinema/ext-src/overholt/alembic'
+let g:netrw_dirhist_3='/home/wenliang/work/zoomapp/alembic'
+let g:netrw_dirhist_4='/home/wenliang/work/zoomapp/app/api_1_0'

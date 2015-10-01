@@ -1,0 +1,15 @@
+git://github.com/FredKSchott/CoVim.git
+https://github.com/ciaranm/detectindent.git
+http://github.com/sandeepsinghmails/Dev_Delight
+https://github.com/gregsexton/gitv.git
+https://github.com/morhetz/gruvbox.git
+https://github.com/NLKNguyen/papercolor-theme.git
+https://github.com/scrooloose/syntastic.git
+https://github.com/majutsushi/tagbar.git
+https://www.github.com/wzhliang/ttfzoom.vim
+https://github.com/bling/vim-airline.git
+https://github.com/danielmiessler/VimBlog.git
+https://github.com/skammer/vim-css-color.git
+https://github.com/tpope/vim-fugitive.git
+https://github.com/fatih/vim-go.git
+https://github.com/Valloric/YouCompleteMe.git

@@ -23,10 +23,13 @@ set modelines=3     " number lines checked for modelines
 set shortmess=atI   " Abbreviate messages
 set nostartofline   " don't jump to first character when paging
 set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
+set backspace=indent,eol,start
 "set viminfo='20,<50,s10,h
 
 set autoindent     " always set autoindenting on
 set diffopt+=vertical
+set nobomb
+set foldmethod=marker
 "set smartindent        " smart indent
 "set cindent            " cindent
 "set noautoindent
@@ -40,18 +43,8 @@ set diffopt+=vertical
 filetype plugin on
 
 syntax on           " syntax highlighing
-if has("gui_running")
-    " See ~/.gvimrc
-    set guifont=Monospace\ 10  " use this font
-    set lines=50       " height = 50 lines
-    set columns=100        " width = 100 columns
-    set background=light   " adapt colors for background
-    set selectmode=mouse,key,cmd
-    set keymodel=
-else
-    colorscheme elflord    " use this color scheme
-    set background=dark        " adapt colors for background
-endif
+colorscheme ron    " use this color scheme
+set background=dark        " adapt colors for background
 
 if has("autocmd")
     " Restore cursor position
@@ -63,10 +56,18 @@ if has("autocmd")
     au FileType helpfile nnoremap <buffer><bs> <c-T>   " Backspace to go back
     
     " When using mutt, text width=72
-    au FileType mail,tex set textwidth=72
-    au FileType cpp,c,java,sh,pl,php,asp  set autoindent
-    au FileType cpp,c,java,sh,pl,php,asp  set smartindent
-    au FileType cpp,c,java,sh,pl,php,asp  set cindent
+    au FileType mail,tex setlocal textwidth=72
+    au FileType cpp,c,java,sh,pl,php,asp  setlocal autoindent
+    au FileType cpp,c,java,sh,pl,php,asp  setlocal smartindent
+    au FileType cpp,c,java,sh,pl,php,asp  setlocal cindent
+    au FileType markdown setlocal foldmethod=indent
+    au FileType markdown setlocal expandtab
+    au FileType markdown setlocal tabstop=4
+    au FileType markdown setlocal shiftwidth=4
+    au FileType xml,html setlocal textwidth=999
+    au FileType xml,html setlocal tabstop=2
+    au FileType xml,html setlocal shiftwidth=2
+    au FileType xml,html setlocal expandtab
     "au BufRead mutt*[0-9] set tw=72
     
     " Automatically chmod +x Shell and Perl scripts
@@ -76,14 +77,9 @@ if has("autocmd")
     " File formats
     au BufNewFile,BufRead  *.pls    set syntax=dosini
     au BufNewFile,BufRead  modprobe.conf    set syntax=modconf
-
-    au BufEnter /work/biotector* setlocal shiftwidth=2
-    au BufEnter /work/biotector* setlocal tabstop=2
-
-    au BufEnter /work/ts7800* setlocal shiftwidth=4
-    au BufEnter /work/ts7800* setlocal tabstop=4
 endif
 
+com! CD cd %:p:h
 " Keyboard mappings
 map <silent> <C-N> :silent noh<CR> " turn off highlighted search
 "map ,v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
@@ -124,25 +120,28 @@ map <silent> <C-N> :silent noh<CR> " turn off highlighted search
 "imap <Esc>Oy 9
 "imap <Esc>Oz 0
 
+iab pdb import pdb; pdb.set_trace()
+iab ndb from nose.tools import set_trace; set_trace()
+iab idb from ipdb import set_trace; set_trace()
+
 behave xterm
 set hidden
 set cmdheight=2
-map <F8> :Tlist<CR>      " map F2 to open next buffer
-map <F2> :w<CR>
+"nnoremap <F8> :Tlist<CR>      " map F2 to open next buffer
+nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F2> :w<CR>
 nmap <C-Down> :cnext<CR>
 nmap <C-Up> :cprev<CR>
-nmap <F9> :make<CR>
-set foldmethod=marker
+nnoremap <F9> :make<CR>
 
 so $HOME/.vim/project.vim
 
 set lcs=tab:^-,trail:-
-nmap <F6> :set invlist<CR>
-nmap <F4> :BufExplorer<CR>
+nnoremap <F6> :set invlist<CR>
+nnoremap <F4> :BufExplorer<CR>
 nmap <C-Enter> :cs f s <C-R><C-W><CR>
 nmap <C-rightmouse> <C-t>
 set cmdheight=2
-set expandtab
 set cscopequickfix=s-,g-,d-,c-,t-,e-,i-
 set nowrap
 au BufEnter *.[ch] setlocal cin
@@ -158,7 +157,7 @@ function! Updatedb()
     exe "!/home/wliang/bin/updatecodedb"
     cs reset
 endfunc
-nmap <F12> :call Updatedb()<CR>
+"nmap <F12> :call Updatedb()<CR>
 
 
 nmap <M-Right> <C-W>l
@@ -166,6 +165,28 @@ nmap <M-Left> <C-W>h
 nmap <M-Up> <C-W>k
 nmap <M-Down> <C-W>j
 let mapleader = ","
-nmap <F7> :Amarks<CR>
+nnoremap <F7> :Amarks<CR>
 
 let g:pyflakes_use_quickfix = 0
+call pathogen#infect()
+
+set listchars=tab:»\ ,trail:·
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+let g:tagbar_sort=0
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+\ }
+
+let g:go_fmt_command="goimports"
+
+" settings for syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

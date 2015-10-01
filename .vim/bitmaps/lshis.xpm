@@ -1,0 +1,31 @@
+/* XPM */
+static char *lshis[] = {
+/* columns rows colors chars-per-pixel */
+"20 20 5 1",
+"  c black",
+". c #FFEC8B",
+"X c gray100",
+"o c gray100",
+"O c None",
+/* pixels */
+"O OOOOOOOOOOOOOOOOOO",
+"OO  OOOOOOOOOOOOOOOO",
+" O O OOOOOOOOOOOOOOO",
+"              OOOOOO",
+"O   .....  ..  OOOOO",
+"O  .  ....  ..  OOOO",
+"         ..  ..  OOO",
+"O  .....  ..  ..  OO",
+"O .  ....  ..  ..  O",
+"O .  .....  ..  ..  ",
+"O .........  .  ..  ",
+"O ..........   ..  O",
+"O ...........  .  OO",
+"O  ..........    OOO",
+"OO  ........    OOOO",
+"OOO  ......    OOOOO",
+"OOOO  ....    OOOOOO",
+"OOOOO  ..  OOOOOOOOO",
+"OOOOOO    OOOOOOOOOO",
+"OOOOOOO  OOOOOOOOOOO"
+};
