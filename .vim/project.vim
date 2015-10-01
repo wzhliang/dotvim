@@ -3,7 +3,6 @@
 set ff=unix
 set shiftwidth=4
 set tabstop=8
-setglobal noexpandtab
 setglobal list
 set tw=80
 "setglob enc=latin1
