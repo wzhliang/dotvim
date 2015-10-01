@@ -8,9 +8,7 @@ function pull {
   rm ../plugin-list.txt
   for d in *; do
     if [ -d $d ]; then
-      cd $d
-      git remote -v show | head -1 | awk '{print $2}'
-      cd ..
+      (cd $d && git remote -v show | head -1 | awk '{print $2}')
     fi
   done > ../plugin-list.txt
 
@@ -32,15 +30,20 @@ function push {
 }
 
 function bundle_up {
-  cd $HOME/.vim/bundle
-  for i in *; do
-  if [ -d $i ]; then
-    echo "Updating $i..."
-    (cd $i && git pull)
-  else
-    git clone $i
+  cd $HOME/.vim
+  if [ ! -d bundle ]; then
+    mkdir bundle
   fi
-done
+  cd bundle
+  cat ../plugin-list.txt | while read line; do
+    _dir=$(basename $line | sed -e 's/\.git$//g')
+    if [ -d $_dir ]; then
+      echo "Updating $_dir"
+      (cd $_dir && git pull)
+    else
+      git clone $line
+    fi
+  done
 }
 
 if [ "$1" == "pull" ]; then
