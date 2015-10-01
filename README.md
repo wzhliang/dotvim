@@ -1,9 +1,12 @@
+# What
 Manages your entire Vim environment.
 
+# Intro
 It can manage both modern plugins which are in github or other social coding
 website or traditional plugins on vim.sf.net (you'll have to manage version
 yourself though)
 
+# How
 Basically `.vimrc, .gvimrc` files are version controlled. Traditional vim
 plugins are similarly controlled in git under the `.vim` directory. github
 plugins are only named inside a `plugin-list.txt` file and cloned or pulled on

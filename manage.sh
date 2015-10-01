@@ -21,10 +21,10 @@ function pull {
 }
 
 function push {
-  tar cvf $tmp_name.tar .vimrc .gvimrc .vim
+  tar cf $tmp_name.tar .vimrc .gvimrc .vim
   cd $HOME
-  tar cvf $tmp_name-backup.tar .vimrc .gvimrc .vim
-  tar xvf $tmp_name.tar
+  tar cf $tmp_name-backup.tar .vimrc .gvimrc .vim
+  tar xf $tmp_name.tar
   rm $tmp_name.tar
   echo "Backup made in $tmp_name-backup.tar"
 }
