@@ -1,5 +1,4 @@
 #!/bin/bash
-
 tmp_name=$HOME/dot-vim$$
 
 # pull vim env from $HOME to current directory
@@ -51,7 +50,9 @@ function bundle_up {
 
 # diff current directory and $HOME
 function _diff {
-    diff .vimrc ~/.vimrc && diff .gvimrc ~/.gvimrc && diff -q .vim ~/.vim
+    diff .vimrc ~/.vimrc
+    diff .gvimrc ~/.gvimrc
+    diff -r .vim ~/.vim
 }
 
 if [ "$1" == "pull" ]; then

@@ -1,14 +1,17 @@
 http://github.com/sandeepsinghmails/Dev_Delight
 https://github.com/NLKNguyen/papercolor-theme.git
 https://github.com/Valloric/YouCompleteMe.git
+https://github.com/avakhov/vim-yaml.git
 https://github.com/bling/vim-airline.git
 https://github.com/ciaranm/detectindent.git
 https://github.com/danielmiessler/VimBlog.git
 https://github.com/fatih/vim-go.git
 https://github.com/gregsexton/gitv.git
+https://github.com/jreybert/vimagit
 https://github.com/majutsushi/tagbar.git
 https://github.com/morhetz/gruvbox.git
 https://github.com/scrooloose/syntastic.git
 https://github.com/skammer/vim-css-color.git
 https://github.com/tpope/vim-fugitive.git
+https://github.com/will133/vim-dirdiff
 https://www.github.com/wzhliang/ttfzoom.vim

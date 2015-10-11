@@ -1,8 +1,10 @@
-color native
+color Mustang
 "set gfn=Liberation\ Mono\ 10
 "set gfn=Ubuntu\ Mono\ 11
 if has('gui_gtk2')
     set gfn=Inconsolata\ Bold\ 11
+elseif has('mac')
+    set gfn=Menlo\ Regular:h11
 endif
 set list
 set mousem=popup
