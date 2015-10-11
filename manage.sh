@@ -2,6 +2,7 @@
 
 tmp_name=$HOME/dot-vim$$
 
+# pull vim env from $HOME to current directory
 function pull {
   _PWD=$(pwd)
   cd $HOME/.vim/bundle
@@ -20,6 +21,7 @@ function pull {
   rm $tmp_name
 }
 
+# push vim env from current directory to $HOME, also backup $HOME
 function push {
   tar cf $tmp_name.tar .vimrc .gvimrc .vim
   cd $HOME
@@ -29,6 +31,7 @@ function push {
   echo "Backup made in $tmp_name-backup.tar"
 }
 
+# git pull everything from $HOME/.vim/bundle
 function bundle_up {
   cd $HOME/.vim
   if [ ! -d bundle ]; then
@@ -46,12 +49,19 @@ function bundle_up {
   done
 }
 
+# diff current directory and $HOME
+function _diff {
+    diff .vimrc ~/.vimrc && diff .gvimrc ~/.gvimrc && diff -q .vim ~/.vim
+}
+
 if [ "$1" == "pull" ]; then
   pull
 elif [ "$1" == "push" ]; then
   push
 elif [ "$1" == "up" ]; then
   bundle_up
+elif [ "$1" == "diff" ]; then
+  _diff
 else
   echo "I do not know what you want. Master."
 fi
