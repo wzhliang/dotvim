@@ -6,6 +6,7 @@ https://github.com/bling/vim-airline.git
 https://github.com/ciaranm/detectindent.git
 https://github.com/danielmiessler/VimBlog.git
 https://github.com/fatih/vim-go.git
+https://github.com/gosukiwi/vim-atom-dark
 https://github.com/gregsexton/gitv.git
 https://github.com/jreybert/vimagit
 https://github.com/majutsushi/tagbar.git
@@ -14,4 +15,5 @@ https://github.com/scrooloose/syntastic.git
 https://github.com/skammer/vim-css-color.git
 https://github.com/tpope/vim-fugitive.git
 https://github.com/will133/vim-dirdiff
+https://github.com/zhchang/quick_file.git
 https://www.github.com/wzhliang/ttfzoom.vim
