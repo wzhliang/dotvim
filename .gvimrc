@@ -4,7 +4,7 @@ color Mustang
 if has('gui_gtk2')
     set gfn=Inconsolata\ Bold\ 11
 elseif has('mac')
-    set gfn=Menlo\ Regular:h11
+    set gfn=Menlo\ Regular:h12
 endif
 set list
 set mousem=popup
@@ -17,3 +17,8 @@ set columns=100        " width = 100 columns
 set selectmode=mouse,key
 "set background=light   " adapt colors for background
 set keymodel=
+
+if has('mac')
+    nmap <D-left> :tabp<CR>
+    nmap <D-right> :tabN<CR>
+endif

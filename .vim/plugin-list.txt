@@ -1,3 +1,4 @@
+git://github.com/digitaltoad/vim-jade.git
 http://github.com/sandeepsinghmails/Dev_Delight
 https://github.com/NLKNguyen/papercolor-theme.git
 https://github.com/Valloric/YouCompleteMe.git

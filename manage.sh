@@ -55,6 +55,13 @@ function _diff {
     diff -r .vim ~/.vim
 }
 
+function help {
+    echo "pull: sync from $HOME to current directory."
+    echo "push: sync from current directory to $HOME."
+    echo "up: upgrade bundles"
+    echo "diff: diff between $HOME and current directory"
+}
+
 if [ "$1" == "pull" ]; then
   pull
 elif [ "$1" == "push" ]; then
@@ -64,5 +71,5 @@ elif [ "$1" == "up" ]; then
 elif [ "$1" == "diff" ]; then
   _diff
 else
-  echo "I do not know what you want. Master."
+  help
 fi

@@ -14,16 +14,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-
-nmap <F11> :botright cwindow<CR>
-nmap <C-F11> :cclose<CR>
-
-
-if has('mac')
-    let SRCDIRs=['/Users/wliang/work/zoomapp']
-else
-    let SRCDIRs=['/home/wenliang/work/zoomapp']
-endif
+let SRCDIRs=[ $HOME . '/work/zoomapp']
 "let SRCDIRs=['/data/work/Wenzhou/MHC_BuildTree']
 for d in SRCDIRs
     "echo "Adding " . d
@@ -52,8 +43,6 @@ if has("win32")
     set grepprg=ack\ -a
 endif
 
-set grepprg=ag
-nmap <F3> :grep <C-R><C-W>
 exec "cd " . SRCDIRs[0]
 
 "au BufEnter *.txt set spell

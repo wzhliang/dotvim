@@ -37,13 +37,13 @@ set foldmethod=marker
 "set nocindent  
 
 "set autowrite      " auto saves changes when quitting and swiching buffer
-"set expandtab      " tabs are converted to spaces, use only when required
+set expandtab      " tabs are converted to spaces, use only when required
 "set sm             " show matching braces, somewhat annoying...
 "set nowrap         " don't wrap lines
 filetype plugin on
 
 syntax on           " syntax highlighing
-colorscheme ron    " use this color scheme
+colorscheme desert    " use this color scheme
 set background=dark        " adapt colors for background
 
 if has("autocmd")
@@ -130,8 +130,13 @@ set cmdheight=2
 "nnoremap <F8> :Tlist<CR>      " map F2 to open next buffer
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F2> :w<CR>
-nmap <C-Down> :cnext<CR>
-nmap <C-Up> :cprev<CR>
+if has('mac')
+    nmap <M-Down> :cnext<CR>
+    nmap <M-Up> :cprev<CR>
+else
+    nmap <C-Down> :cnext<CR>
+    nmap <C-Up> :cprev<CR>
+endif
 nnoremap <F9> :make<CR>
 
 so $HOME/.vim/project.vim
@@ -158,14 +163,22 @@ function! Updatedb()
     cs reset
 endfunc
 "nmap <F12> :call Updatedb()<CR>
+"
+nmap <F12> :botright cwindow<CR>
+nmap <C-F12> :cclose<CR>
 
 
-nmap <M-Right> <C-W>l
-nmap <M-Left> <C-W>h
-nmap <M-Up> <C-W>k
-nmap <M-Down> <C-W>j
+" nmap <C-l> <C-W>l
+" nmap <C-h> <C-W>h
+" nmap <C-k> <C-W>k
+" nmap <C-j> <C-W>j
 let mapleader = ","
 nnoremap <F7> :Amarks<CR>
+
+
+set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%c:%m
+nmap <F3> :grep <C-R><C-W>
 
 let g:pyflakes_use_quickfix = 0
 call pathogen#infect()
@@ -190,3 +203,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_html_checkers=['']
