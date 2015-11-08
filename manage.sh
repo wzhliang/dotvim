@@ -1,8 +1,8 @@
 #!/bin/bash
 tmp_name=$HOME/dot-vim$$
 
-# pull vim env from $HOME to current directory
-function pull {
+
+function update_plugin_list {
   _PWD=$(pwd)
   cd $HOME/.vim/bundle
   rm ../plugin-list.txt
@@ -11,6 +11,12 @@ function pull {
       (cd $d && git remote -v show | head -1 | awk '{print $2}')
     fi
   done | sort > ../plugin-list.txt
+  cd $_PWD
+}
+
+# pull vim env from $HOME to current directory
+function pull {
+  update_plugin_list
 
   cd $HOME
   tar --exclude="*bundle*" -cf $tmp_name .vim .vimrc .gvimrc
@@ -50,6 +56,7 @@ function bundle_up {
 
 # diff current directory and $HOME
 function _diff {
+    update_plugin_list
     diff .vimrc ~/.vimrc
     diff .gvimrc ~/.gvimrc
     diff -r .vim ~/.vim
