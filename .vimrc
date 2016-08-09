@@ -64,10 +64,11 @@ if has("autocmd")
     au FileType markdown setlocal expandtab
     au FileType markdown setlocal tabstop=4
     au FileType markdown setlocal shiftwidth=4
-    au FileType xml,html setlocal textwidth=999
-    au FileType xml,html setlocal tabstop=2
-    au FileType xml,html setlocal shiftwidth=2
-    au FileType xml,html setlocal expandtab
+    au FileType markdown nmap <F9> :!/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome %<CR>
+    au FileType xml,html,jade setlocal textwidth=999
+    au FileType xml,html,jade setlocal tabstop=2
+    au FileType xml,html,jade setlocal shiftwidth=2
+    au FileType xml,html,jade setlocal expandtab
     "au BufRead mutt*[0-9] set tw=72
     
     " Automatically chmod +x Shell and Perl scripts
@@ -175,10 +176,12 @@ nmap <C-F12> :cclose<CR>
 let mapleader = ","
 nnoremap <F7> :Amarks<CR>
 
+command! W :lcd ~/Nut/wiki
 
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
 nmap <F3> :grep <C-R><C-W>
+nmap <Leader>S :SyntasticToggleMode<CR>
 
 let g:pyflakes_use_quickfix = 0
 call pathogen#infect()

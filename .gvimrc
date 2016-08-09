@@ -22,3 +22,5 @@ if has('mac')
     nmap <D-left> :tabp<CR>
     nmap <D-right> :tabN<CR>
 endif
+
+amenu Plugin.Syntastic.Toggle :SyntasticToggleMode<CR> 

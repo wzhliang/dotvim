@@ -63,10 +63,11 @@ function _diff {
 }
 
 function help {
-    echo "pull: sync from $HOME to current directory."
-    echo "push: sync from current directory to $HOME."
-    echo "up: upgrade bundles"
-    echo "diff: diff between $HOME and current directory"
+    echo "Help:"
+    echo "      pull: sync from $HOME to current directory."
+    echo "      push: sync from current directory to $HOME."
+    echo "      up: upgrade bundles"
+    echo "      diff: diff between $HOME and current directory"
 }
 
 if [ "$1" == "pull" ]; then
