@@ -60,7 +60,6 @@ if has("autocmd")
     au FileType cpp,c,java,sh,pl,php,asp  setlocal autoindent
     au FileType cpp,c,java,sh,pl,php,asp  setlocal smartindent
     au FileType cpp,c,java,sh,pl,php,asp  setlocal cindent
-    au FileType markdown setlocal foldmethod=indent
     au FileType markdown setlocal expandtab
     au FileType markdown setlocal tabstop=4
     au FileType markdown setlocal shiftwidth=4

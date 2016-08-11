@@ -9,10 +9,13 @@ https://github.com/danielmiessler/VimBlog.git
 https://github.com/fatih/vim-go.git
 https://github.com/gosukiwi/vim-atom-dark
 https://github.com/gregsexton/gitv.git
+https://github.com/isRuslan/vim-es6.git
 https://github.com/jreybert/vimagit
 https://github.com/majutsushi/tagbar.git
 https://github.com/morhetz/gruvbox.git
 https://github.com/pangloss/vim-javascript.git
+https://github.com/plasticboy/vim-markdown
+https://github.com/rust-lang/rust.vim.git
 https://github.com/scrooloose/syntastic.git
 https://github.com/skammer/vim-css-color.git
 https://github.com/ternjs/tern_for_vim.git
